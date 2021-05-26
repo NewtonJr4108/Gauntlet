@@ -1,11 +1,12 @@
 import hashlib as hl
 import json
 
-# __all__ = ['hash_string_256', 'hash_block']
+# __all__ = ['hash_string_512', 'hash_block']
 
-# Uses SHA256 hashing algorithm to hash a given input string
+# Uses SHA512 hashing algorithm to hash a given input string
+#Says hash_string_256 to avoid changing all files that use the parameter. Actually holds a SHA512 hash value.
 def hash_string_256(string):
-    return hl.sha256(string).hexdigest()
+    return hl.sha512(string).hexdigest()
 
 # Hashes a block and returns a str representation of it
 def hash_block(block):
