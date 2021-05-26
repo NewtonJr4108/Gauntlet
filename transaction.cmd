@@ -3,4 +3,5 @@ curl --location --request POST 'localhost:5000/transaction' \
 --data-raw '{
     "recipient":"recipient-pub-address",
     "amount":5
+    "signature":"sender-pub-address"
 }'
