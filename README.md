@@ -1,3 +1,6 @@
+# Blockchain Project
+<img src="https://github.com/adi2381/py-blockchain/blob/master/cover.png" height="300" width="450">
+This project is an implementation of blockchain and it's concepts in Python & Flask with Postman used for API development
 
 ## Getting Started
 
@@ -36,6 +39,8 @@
 ## API Calls
 Below is a list of API calls and short description about what they do, these api calls can conveniently be executed in Postman
 Localhost & Port have been set in node.py file, by default I've set them as 0.0.0.0 with port=5000
+**It is reccomended to send API calls through postman, but .cmd files are availible as well.**
+
 
 ### Blockchain 
 Creates a blockchain.txt file that contains information regarding the transactions and other information related to the blockchain
@@ -114,3 +119,7 @@ Go to "Body" > "Raw" > Select "Json" in the current window and enter the followi
 
 * Legacy_blockchain_files - contains old files related to project
 
+## Shoutout
+Huge credits to Dapp university & howCode for explaining the concepts and how to implement them in python. 
+1. [Dapp University Video Link](https://www.youtube.com/watch?v=pZSegEXtgAE)
+2. [howCode Video Link](https://www.youtube.com/watch?v=b81Ib_oYbFk)
