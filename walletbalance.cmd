@@ -1,1 +1,1 @@
-curl --location --request GET 'localhost:5000/balance'
+curl --location --request GET "localhost:5000/balance"
