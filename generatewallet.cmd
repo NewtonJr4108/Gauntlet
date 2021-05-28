@@ -1,1 +1,1 @@
-curl --location --request POST 'http://localhost:5000/wallet'
+curl --location --request POST "http://localhost:5000/wallet"
