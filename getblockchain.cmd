@@ -1,1 +1,1 @@
-curl --location --request GET 'localhost:5000/chain'
+curl --location --request GET "localhost:5000/chain"
