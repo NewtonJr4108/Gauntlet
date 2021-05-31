@@ -258,4 +258,14 @@ def get_nodes():
 
 
 if __name__ == '__main__':
-    app.run()
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    # # We add additional arguments which can be used during execution to perform
+    # addition funtionality such as create a new port
+    parser.add_argument('-p', '--port', type=int, default=5000)
+    # Getting a list of arguments using parser
+    args = parser.parse_args()
+    port = args.port
+    wallet = Wallet(port)
+    blockchain = Blockchain(wallet.public_key, port)
+    app.run(host='0.0.0.0', port=port)
