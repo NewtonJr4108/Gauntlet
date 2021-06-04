@@ -26,7 +26,7 @@ print(__name__)
 class Blockchain:
     def __init__(self, public_key, node_id):
         # Genesis block is the very first block in our blockchain
-        genesis_block = Block(0, '', [], 100, 0)
+        genesis_block = Block(0, 'CNBC 4/JUNE/2021: BITCOIN FALLS AFTER MUSK BITCOIN MEME', [], 100, 0)
         # Initializing our blockchain list
         self.chain = [genesis_block]
         # Unhandled or Open transactions which are yet to be included in a block
