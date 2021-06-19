@@ -17,9 +17,9 @@ class Verification:
          # Hash the string; This hash is used for POW Algorithm and is not the same as stored in previous_hash
         guess_hash = hash_string_256(guess)
        # Only a hash (which is based on the above inputs) which starts with two 0s is treated as valid
-        # If 10 0's are used instead of '00', this allows to control the speed at which new blocks are created 
+        # If 10 0's are used instead of '00000', this allows to control the speed at which new blocks are created 
         # so more 0's mean more time will be required to create a new block
-        return guess_hash[0:2] == '00'
+        return guess_hash[0:5] == '00000'
 
     # # Analyze and Verify the Blockchain, return True if it's valid else False    
     @classmethod
