@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 19 17:46:52 2021
-
-@author: Coding
-"""
-
-# importing the requests library
 import requests
 import sys
 import shutil
