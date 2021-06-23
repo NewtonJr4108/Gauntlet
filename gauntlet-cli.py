@@ -41,8 +41,9 @@ def mine():
         r = requests.post(url = API_ENDPOINT)
         print("==============================================")
         print(r.json())
-        print("Blocksize: "+str(len(r))+" bytes")
         print("==============================================")
+        print("Blocksize: "+str(len(r.content))+" bytes")
+
         emissions = tracker.stop()
         fltem = ("{:.8f}".format(float(emissions)))
         print("You used "+fltem+" Kilowatt Hours to mine this block.")
