@@ -2,10 +2,8 @@ import requests
 import sys
 import shutil
 import time
-
-    
-    
-    
+from termcolor import colored, cprint
+from codecarbon.emissions_tracker import EmissionsTracker  
     
     
     
@@ -37,19 +35,23 @@ def mine():
         
         # your API key here
         # your source code here
-        
+        tracker = EmissionsTracker()
+        tracker.start()
         # sending post request and saving response as response object
         r = requests.post(url = API_ENDPOINT)
         print("==============================================")
         print(r.json())
-        print("Blocksize: "+str(sys.getsizeof(r))+" bytes")
+        print("Blocksize: "+str(len(r))+" bytes")
         print("==============================================")
+        emissions = tracker.stop()
+        fltem = ("{:.8f}".format(float(emissions)))
+        print("You used "+fltem+" Kilowatt Hours to mine this block.")
+        if float(fltem) > 1:
+            time.sleep(10)
         
-    
         for i in range(4):
             print("")
-        time.sleep(10)
-        continue
+            
     
     
 def welcomemsg():
@@ -67,3 +69,4 @@ def welcomemsg():
     if selection == "3":
         loadwallet()
 welcomemsg()
+input()
