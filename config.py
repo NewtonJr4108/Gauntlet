@@ -1,0 +1,2 @@
+privatewalletaddr = ""
+publicwalletaddr = ""
